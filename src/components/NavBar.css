@@ -1,0 +1,10 @@
+.NavBar{
+  flex-grow: .5;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 4px;  
+  color: white;
+}
+

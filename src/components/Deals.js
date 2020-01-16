@@ -1,11 +1,12 @@
 import React,{ Component } from 'react'
+import './Deals.css'
 
 class Deals extends Component{
 
   render(){
     return(
-      <div>
-        Hi from Deals
+      <div className='Deals'>
+        <h1>Deals</h1>
       </div>
     )
   }
