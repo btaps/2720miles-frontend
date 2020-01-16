@@ -6,7 +6,7 @@ class Signin extends Component{
   render(){
     return(
       <div className='Signin'>
-        <h1>Deals</h1>
+        <h1>Sign In</h1>
       </div>
     )
   }

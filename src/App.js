@@ -18,9 +18,9 @@ function App() {
 	/>
 	  <Switch>
   	    <Route path='/' exact component={HomePage}/>
-	    <Route path='/account/signin' exact component={Signin}/>
-	    <Route path='/shop/deals/' exact component={Deals}/>
-	    <Route path='/search' exact component={Search}/>
+	    <Route path='/account/signin' component={Signin}/>
+	    <Route path='/shop/deals/' component={Deals}/>
+	    <Route path='/search' component={Search}/>
           </Switch>
         <Footer
 	  className="container"

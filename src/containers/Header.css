@@ -1,12 +1,72 @@
 .Header{
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  height: 90px;
+  align-items: center;
+  height: 100%;
   background-color: black;
   color: white;
 }
 
-.logo {
+img{
+  max-width: 100%;
+}
+
+button{
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 20px;
+  margin-left: 4px; 
+  font-size: 17px;
+}
+
+.search{
   flex-grow: 1;
+  text-align: center;
+}
+
+.search-field{
+  height: 50px;
+  border-radius: 25px;
+  width: 80%;
+  font-size: 17px;
+}
+
+.drop-down-menu{
+  flex-basis: 100%;
+  background-color: white;
+}
+
+.main-menu, .sub-menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu{
+  display: inline-flex;
+}
+
+.main-menu a{
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+
+.main-menu a:hover {
+    background-color: #C5C5C5;
+}
+
+.main-menu li:hover .sub-menu {
+  display: block;
+  max-height: 200px;
+}
+
+.sub-menu a {
+  background-color: #999;
+}
+
+.sub-menu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
 }

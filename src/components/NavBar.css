@@ -1,5 +1,6 @@
 .NavBar{
-  flex-grow: .5;
+  flex-grow: .2;
+  text-align: center;
 }
 
 a {
