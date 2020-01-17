@@ -5,6 +5,8 @@ import { Switch, Route } from 'react-router-dom'
 import Header from './containers/Header'
 import Footer from './containers/Footer'
 
+import HeaderNav from './components/HeaderNav'
+
 import HomePage from './components/HomePage'
 import Deals from './components/Deals'
 import Search from './components/Search'
@@ -16,6 +18,7 @@ function App() {
         <Header 
 	  className="container"
 	/>
+	<HeaderNav />
 	  <Switch>
   	    <Route path='/' exact component={HomePage}/>
 	    <Route path='/account/signin' component={Signin}/>

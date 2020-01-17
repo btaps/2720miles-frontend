@@ -18,30 +18,6 @@ class Header extends Component{
           </form>
 	</div>
         <NavBar />
-	<div className='drop-down-menu'>
-          <ul className='main-menu'>
-	    <li><a href='#'>Clothes</a>
-	      <ul className='sub-menu'>
-	        <li><a href='#'>Tops</a></li>
-	        <li><a href='#'>Bottoms</a></li>
-              </ul>
-	    </li>
-	    <li><a href='#'>Accessories</a>
-	      <ul className='sub-menu'>
-	        <li><a href='#'>Handbags</a></li>
-	        <li><a href='#'>Shoes</a></li>
-	        <li><a href='#'>Jewelery</a></li>
-              </ul>
-	    </li>
-	    <li><a href='/shop/deals/'>Sale</a>
-	      <ul className='sub-menu'>
-	        <li><a href='#'>Tops</a></li>
-	        <li><a href='#'>Bottoms</a></li>
-	        <li><a href='#'>Accessories</a></li>
-              </ul>
-	    </li>
-	  </ul>
-	</div>
       </div>
     )
   }
