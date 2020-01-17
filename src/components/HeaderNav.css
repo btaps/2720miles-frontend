@@ -1,7 +1,8 @@
 .navigation {
   list-style: none;
   margin: 0; 
-  
+  margin-bottom: 20px;
+
   background-color: rgb(253, 211, 214);
   
   display: -webkit-box;
@@ -32,7 +33,7 @@
 }
 
 .navigation a:hover {
-  background-color: rgb(253, 221, 214);
+  background-color: rgba(253, 221, 214, .07);
 }
 
 .navigation li:hover .sub-menu {
