@@ -1,4 +1,8 @@
 import React,{ Component } from 'react'
+import UsersModel from '../models/UsersModel'
+import ProductsModel from '../models/ProductsModel'
+
+import HomeSlideshow from './HomeSlideshow'
 import './HomePage.css'
 
 import PhotoA1 from '../photos/picA1.png'
@@ -17,43 +21,59 @@ import PhotoD2 from '../photos/picD2.jpg'
 import PhotoD3 from '../photos/picD3.jpg'
 
 class HomePage extends Component{
+  
+  state ={
+    products: []
+  }
+  
 
+  componentDidMount(){
+    this.fetchAll()
+  }
+  
+  fetchAll = () => {
+    ProductsModel.all()
+      .then(users => {
+        this.setState({users: users})
+      })
+  }
   render(){
     return(
       <div className='HomePage'>
+	<HomeSlideshow />
         <div className='wrapper'>
           <div className='Photos'>
-            <img src={PhotoA1} alt='product' />
+            <img className='home-img' src={PhotoA1} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoA2} alt='product' />
+            <img className='home-img' src={PhotoA2} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoA3} alt='product' />
+            <img className='home-img' src={PhotoA3} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoB1} alt='product' />
+            <img className='home-img' src={PhotoB1} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoB3} alt='product' />
+            <img className='home-img' src={PhotoB3} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoC1} alt='product' />
+            <img className='home-img' src={PhotoC1} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoC2} alt='product' />
+            <img className='home-img' src={PhotoC2} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoC3} alt='product' />
+            <img className='home-img' src={PhotoC3} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoD1} alt='product' />
+            <img className='home-img' src={PhotoD1} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoD2} alt='product' />
+            <img className='home-img' src={PhotoD2} alt='product' />
 	  </div>
           <div className='Photos'>
-            <img src={PhotoD3} alt='product' />
+            <img className='home-img' src={PhotoD3} alt='product' />
 	  </div>
         </div>
       </div>	 

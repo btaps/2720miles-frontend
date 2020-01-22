@@ -1,5 +1,10 @@
 .Header{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
@@ -7,11 +12,11 @@
   color: white;
 }
 
-img{
+.Header-logo{
   max-width: 100%;
 }
 
-button{
+.Header-button{
   height: 50px;
   border-radius: 25px;
   padding: 0 20px;
@@ -31,3 +36,14 @@ button{
   font-size: 17px;
 }
 
+@media all and (max-width: 600px){
+  .logo{
+    display:flex;
+    justify-content: center;
+    flex: 1 auto;
+    order: -1;
+  }
+  .search{
+    flex: 1 100%;
+  }
+}

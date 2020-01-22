@@ -9,12 +9,14 @@ class Header extends Component{
     return(
       <div className='Header'>
 	<div className='logo'>
-	  <img src={Logo} alt='2720miles logo'/>
+	  <div className='Header-div-img'>
+	    <img className='Header-logo'src={Logo} alt='2720miles logo'/>
+	  </div>
 	</div>
 	<div className='search'>
 	  <form>
             <input type='text' className='search-field' placeholder='Search for items here...'/>
-	    <button type='button'>Search</button>
+	    <button className='Header-button' type='button'>Search</button>
           </form>
 	</div>
         <NavBar />

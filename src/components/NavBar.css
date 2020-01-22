@@ -9,3 +9,9 @@ a {
   color: white;
 }
 
+@media all and (max-width: 600px){
+  .NavBar{
+    flex: 1 auto;
+    order: -1;
+  }
+}

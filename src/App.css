@@ -6,6 +6,10 @@
   border: solid black .2em;
 }
 
+.h1-App{
+  text-align: center;
+}
+
 .Header {
   color:red;
 }
