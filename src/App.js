@@ -1,35 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css'
-import { Switch, Route } from 'react-router-dom' 
 
 import Header from './containers/Header'
 import Footer from './containers/Footer'
 
 import HeaderNav from './components/HeaderNav'
+import UsersModel from './models/UsersModel'
+import Routes from './config/routes'
 
-import HomePage from './components/HomePage'
-import Deals from './components/Deals'
-import Search from './components/Search'
-import Signin from './components/Signin'
+class App extends Component{
 
-function App() {
-  return (
-    <div >
-        <Header 
-	  className="container"
-	/>
-	<HeaderNav />
-	  <Switch>
-  	    <Route path='/' exact component={HomePage}/>
-	    <Route path='/account/signin' component={Signin}/>
-	    <Route path='/shop/deals/' component={Deals}/>
-	    <Route path='/search' component={Search}/>
-          </Switch>
-        <Footer
-	  className="container"
-	/>
-    </div>
-  );
+  state = {
+    currentUser: localStorage.getItem('uid'),
+    id: ''
+  }
+
+  componentDidMount(){
+    if(this.state.id){
+      UsersModel.getOne(this.state.id)
+        .then(data=> console.log(data))
+    }
+  }
+
+  setCurrentUser = (token, id) => {
+      this.setState({ id: id })
+      this.setState({ currentUser: token });
+      localStorage.setItem('uid', token);
+  };
+  
+  logout = () => {
+    localStorage.removeItem('uid');
+    this.setState({ currentUser: null });
+    this.props.history.push('/')
+  };
+  
+
+  render(){
+    return (
+      <div >
+          <Header currentUser={this.state.currentUser} logout={this.logout} className="container"/>
+	  <HeaderNav />
+	  <Routes userId={this.state.id} currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser}/>
+	  <Footer className="container"/>
+      </div>
+    );
+  }
 }
 
 export default App;

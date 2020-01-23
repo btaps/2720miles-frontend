@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 import UsersModel from '../models/UsersModel'
 import './Signin.css'
+import { withRouter } from 'react-router-dom'
 
 class Signin extends Component{
 
@@ -18,7 +19,7 @@ class Signin extends Component{
     e.preventDefault()
     if(this.state.password !== this.state.rePassword){
       alert("Passwords don't match!")
-    }else{
+    }else if(this.state.firstName){
       UsersModel.create({
         first_name: this.state.firstName,
         last_name: this.state.lastName,
@@ -33,7 +34,24 @@ class Signin extends Component{
         rePassword: ''
       })
       alert('Profile created')
+      this.props.history.push('/account/profile')
+    }else if(this.state.signEmail){
+      UsersModel.login({
+        email: this.state.signEmail,
+	password: this.state.signPassword
+      })
+      .then(data=>{
+	      console.log(data)
+        this.props.setCurrentUser(data.token, data.id)
+        this.props.history.push('/account/profile')
+      })
+      this.setState({
+        signEmail: '',
+        signPassword: ''
+      })
     }
+    
+
   }  
 
   onChange = (e)=>{
@@ -53,7 +71,7 @@ class Signin extends Component{
       <h1 className='Search-h1'>WELCOME TO 2720MILES</h1>
       <div className='Signin'>
         <div className='Search-signin Search-flex-item'>
-          <h1 className='Search-flex-item-h1'> Sing In </h1>
+          <h1 className='Search-flex-item-h1'> Sign In </h1>
 	  <form onSubmit={this.onFormSubmit}>
             <p className='Search-p'>Email</p>
             <input className='Search-input'  type='email' name='signin-email' placeholder='Sample@gmail.com' onChange={this.onChange} value={this.state.signEmail}/>
@@ -65,7 +83,7 @@ class Signin extends Component{
 	  </form>
         </div>
         <div className='Search-signup Search-flex-item'>
-          <h1 className='Search-flex-item-h1'> Sing Up </h1>
+          <h1 className='Search-flex-item-h1'> Sign Up </h1>
 	  <form onSubmit={this.onFormSubmit}>
             <p className='Search-p'>First Name</p>
             <input className='Search-input' type='text' name='first-name' placeholder='Jess' onChange={this.onChange} value={this.state.firstName}/>
@@ -86,4 +104,4 @@ class Signin extends Component{
   }
 }
 
-export default Signin
+export default withRouter(Signin)

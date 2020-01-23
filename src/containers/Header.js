@@ -3,8 +3,9 @@ import Logo from '../logo.png'
 
 import NavBar from '../components/NavBar'
 import './Header.css'
-class Header extends Component{
 
+class Header extends Component{
+  
   render(){
     return(
       <div className='Header'>
@@ -19,7 +20,7 @@ class Header extends Component{
 	    <button className='Header-button' type='button'>Search</button>
           </form>
 	</div>
-        <NavBar />
+        <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
       </div>
     )
   }

@@ -1,11 +1,10 @@
-import React,{ Component } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './NavBar.css'
 
-class NavBar extends Component{
-  
-  render(){
-    return(
+function NavBar({currentUser, logout}){
+ 
+  let links = (
       <div className='NavBar'>
         <NavLink
           to = '/'exact
@@ -17,24 +16,35 @@ class NavBar extends Component{
 	  activeClassName = 'active'
 	>Sign In
 	</NavLink>
+      </div>
+  )
+
+  let authLinks = (
+      <div className='NavBar'>
         <NavLink
-          to = '/shop/deals'exact
+          to = '/'exact
 	  activeClassName = 'active'
-	>Deals
+	>Home
 	</NavLink>
         <NavLink
-          to = '/search'exact
+          to = '/account/profile'exact
 	  activeClassName = 'active'
-	>Search
+	>Profile
 	</NavLink>
         <NavLink
-          to = '/word'exact
+          onClick={logout}
+          to = '/'exact
 	  activeClassName = 'active'
-	>word
+	>Log out
 	</NavLink>
       </div>
+  )
+      
+    return(  
+      <div >
+        { currentUser ? authLinks : links }
+      </div>
     )
-  }
 }
 
 export default NavBar
