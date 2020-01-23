@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import  { withRouter } from 'react-router-dom'
 import './App.css'
 
 import Header from './containers/Header'
 import Footer from './containers/Footer'
 
 import HeaderNav from './components/HeaderNav'
-import UsersModel from './models/UsersModel'
 import Routes from './config/routes'
 
 class App extends Component{
@@ -15,16 +15,12 @@ class App extends Component{
     id: ''
   }
 
-  componentDidMount(){
-    if(this.state.id){
-      UsersModel.getOne(this.state.id)
-        .then(data=> console.log(data))
-    }
-  }
 
-  setCurrentUser = (token, id) => {
-      this.setState({ id: id })
-      this.setState({ currentUser: token });
+  setCurrentUser = (token, userId) => {
+	  this.setState({
+		  id: userId,
+		  currentUser: token
+	  })
       localStorage.setItem('uid', token);
   };
   
@@ -47,4 +43,4 @@ class App extends Component{
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -38,11 +38,11 @@ class HomeSlideshow extends Component{
         </div>
 
         <div className='slide-navigation'>
-          <label for='r1' className='bar'></label>
-          <label for='r2' className='bar'></label>
-          <label for='r3' className='bar'></label>
-          <label for='r4' className='bar'></label>
-          <label for='r5' className='bar'></label>
+          <label htmlFor='r1' className='bar'></label>
+          <label htmlFor='r2' className='bar'></label>
+          <label htmlFor='r3' className='bar'></label>
+          <label htmlFor='r4' className='bar'></label>
+          <label htmlFor='r5' className='bar'></label>
         </div>
       </div>
     )

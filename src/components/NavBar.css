@@ -1,3 +1,8 @@
+.NavBar-main-div{
+  order: -1;
+  flex: 1;
+}
+
 .NavBar{
   flex-grow: .2;
   text-align: center;
@@ -13,5 +18,12 @@ a {
   .NavBar{
     flex: 1 auto;
     order: -1;
+  }
+  .NavBar > a {
+    text-decoration: none;
+    margin: 17px 8px;
+    padding: 0 21px;  
+    color: white;
+    display: block;
   }
 }

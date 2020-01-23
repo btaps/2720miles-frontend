@@ -86,3 +86,9 @@ input[name="r"]{
 #r5:checked ~ .s1{
   margin-left: -80%;
 }
+
+@media all and (max-width:820px){
+  .slider-show{
+    display: none;
+  }
+}

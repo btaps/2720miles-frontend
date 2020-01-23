@@ -6,7 +6,7 @@ class HeaderNav extends Component{
   render(){
     return(
       <div>
-        <ul class='navigation'>
+        <ul className='navigation'>
           <li className='drop-width'><a className='New' href='/'>New</a></li>
           <li className='drop drop-width'><a href='/'>Clothing</a>
               <ul className='sub-menu'>

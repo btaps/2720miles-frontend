@@ -1,5 +1,4 @@
 import React,{ Component } from 'react'
-import UsersModel from '../models/UsersModel'
 import ProductsModel from '../models/ProductsModel'
 
 import HomeSlideshow from './HomeSlideshow'
@@ -37,8 +36,8 @@ class HomePage extends Component{
       })
   }
   render(){
-	  let images = this.state.products.length ? this.state.products[0].images : "Nothing here yet"
-	  console.log(images)
+	//  let images = this.state.products.length ? this.state.products[0].images : "Nothing here yet"
+	  //console.log(images)
     return(
       <div className='HomePage'>
 	  <h1 className='h1-App'> OUR CUSTOMERS SETTING TRENDS </h1> 

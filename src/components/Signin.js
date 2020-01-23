@@ -26,24 +26,26 @@ class Signin extends Component{
         email: this.state.email,
         password: this.state.password
       })
-      this.setState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        rePassword: ''
-      })
-      alert('Profile created')
-      this.props.history.push('/account/profile')
+        .then(data=> {
+          UsersModel.login({
+            email: this.state.email,
+	    password: this.state.password
+          })
+            .then(data=>{
+	      console.log(data)
+              this.props.setCurrentUser(data.token, data.id)
+              this.props.history.push('/account/profile')
+            })
+	})
     }else if(this.state.signEmail){
       UsersModel.login({
         email: this.state.signEmail,
 	password: this.state.signPassword
       })
       .then(data=>{
-	      console.log(data)
         this.props.setCurrentUser(data.token, data.id)
         this.props.history.push('/account/profile')
+	data.message === 'Username or password incorrect' ? alert(data.message) : alert(data.message)
       })
       this.setState({
         signEmail: '',

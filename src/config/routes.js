@@ -9,7 +9,7 @@ export default withRouter(({ userId, setCurrentUser, currentUser, history }) => 
   const PrivateRoute = ({component: Component, ...rest}) => (
     <Route {...rest} render={(props) => (
       currentUser
-        ? <Profile {...props} />
+        ? <Component {...rest} {...props} />
         : <Redirect to='/account/signin' />
     )} />
   );
@@ -18,7 +18,7 @@ export default withRouter(({ userId, setCurrentUser, currentUser, history }) => 
 	    <Switch>
   	      <Route path='/' exact component={HomePage}/>
 	      <Route path='/account/signin' render={()=> <Signin currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
-	      <PrivateRoute path='/account/Profile' render={()=> <Profile userId={userId} />}/>
+	      <PrivateRoute path='/account/Profile' component={Profile} userId={userId} />}/>
             </Switch>
   );
 });

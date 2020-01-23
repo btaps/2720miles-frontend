@@ -41,7 +41,7 @@ function NavBar({currentUser, logout}){
   )
       
     return(  
-      <div >
+      <div className='NavBar-main-div'>
         { currentUser ? authLinks : links }
       </div>
     )
