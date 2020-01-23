@@ -26,20 +26,22 @@ class HomePage extends Component{
     products: []
   }
   
-
   componentDidMount(){
     this.fetchAll()
   }
   
   fetchAll = () => {
     ProductsModel.all()
-      .then(users => {
-        this.setState({users: users})
+      .then(p => {
+        this.setState({products: p.rows})
       })
   }
   render(){
+	  let images = this.state.products.length ? this.state.products[0].images : "Nothing here yet"
+	  console.log(images)
     return(
       <div className='HomePage'>
+	  <h1 className='h1-App'> OUR CUSTOMERS SETTING TRENDS </h1> 
 	<HomeSlideshow />
         <div className='wrapper'>
           <div className='Photos'>

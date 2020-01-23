@@ -1,3 +1,80 @@
 .Signin{
-  flex-basis: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Search-h1{
+  text-align: center;
+  color: #000;
+  margin: 40px 0;
+}
+
+.Search-signup{
+  border: 3px solid #000;
+}
+
+.Search-signin{
+  border: 3px solid #000;
+}
+
+.Search-p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 7px;
+}
+.Search-input{
+  width: 100%; 
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.Search-signin a{
+  color: #fff;
+  display: block;  
+}
+
+.Search-flex-item{
+  width: 400px;
+  height: 600px;
+  padding: 43px 55px;
+  background-color: rgb(253, 211, 214);
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.Search-flex-item-h1{
+  text-align: center;
+}
+
+.Search-flex-item input[type='text'], input[type='email'], input[type='password']{
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.Search-flex-item input[type='submit']{
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media all and (max-width: 600px){
+  .Search-flex-item{
+    padding: 17px 17px 17px 6px;
+  }
+  .Search-signin{
+    height: 380px;
+  }
 }

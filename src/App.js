@@ -19,7 +19,6 @@ function App() {
 	  className="container"
 	/>
 	<HeaderNav />
-	  <h1 className='h1-App'> OUR CUSTOMERS SETTING TRENDS </h1> 
 	  <Switch>
   	    <Route path='/' exact component={HomePage}/>
 	    <Route path='/account/signin' component={Signin}/>
