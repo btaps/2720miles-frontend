@@ -19,7 +19,8 @@ class Signin extends Component{
   componentDidMount(){
     UsersModel.all()
       .then(data=> {
-	this.setState({allUsers: data})
+	console.log(data)
+        this.setState({allUsers: data})
       })
       .catch(err=> console.log('err fetchin all users', err))
   }
