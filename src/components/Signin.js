@@ -2,7 +2,6 @@ import React,{ Component } from 'react'
 import UsersModel from '../models/UsersModel'
 import './Signin.css'
 import { withRouter } from 'react-router-dom'
-import User from './models/UsersModel.js'
 
 class Signin extends Component{
 
@@ -18,7 +17,7 @@ class Signin extends Component{
   }
 
   componentDidMount(){
-    User.all()
+    UsersModel.all()
       .then(data=> {
 	this.setState({allUsers: data})
       })
