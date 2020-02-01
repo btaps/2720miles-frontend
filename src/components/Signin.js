@@ -2,6 +2,7 @@ import React,{ Component } from 'react'
 import UsersModel from '../models/UsersModel'
 import './Signin.css'
 import { withRouter } from 'react-router-dom'
+import User from './models/UsersModel.js'
 
 class Signin extends Component{
 
@@ -12,9 +13,17 @@ class Signin extends Component{
       lastName: '',
       email: '',
       password: '',
-      rePassword: ''
+      rePassword: '',
+      allUsers: []
   }
 
+  componentDidMount(){
+    User.all()
+      .then(data=> {
+	this.setState({allUsers: data})
+      })
+      .catch(err=> console.log('err fetchin all users', err))
+  }
   onFormSubmit = (e)=>{
     e.preventDefault()
     if(this.state.password !== this.state.rePassword){
