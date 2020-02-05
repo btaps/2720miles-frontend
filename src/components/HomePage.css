@@ -40,7 +40,7 @@
 }
 @media all and (max-width: 820px){
   .Photos{
-    height: 167px;
+    height: auto;
     width: 48%;
     padding: 3px;
     margin: 0;
