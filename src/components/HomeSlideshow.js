@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import './HomeSlideshow.css'
 
 import Slide1 from '../photos/slide1.jpg'
-import Slide2 from '../photos/slide2.png'
+import Slide2 from '../photos/slide2.jpg'
 import Slide3 from '../photos/slide3.jpg'
 import Slide4 from '../photos/slide4.jpg'
-import Slide5 from '../photos/slide5.png'
+import Slide5 from '../photos/slide5.jpg'
 
 class HomeSlideshow extends Component{
   
@@ -42,7 +42,7 @@ class HomeSlideshow extends Component{
           <label htmlFor='r2' className='bar'></label>
           <label htmlFor='r3' className='bar'></label>
           <label htmlFor='r4' className='bar'></label>
-          <label htmlFor='r5' className='bar'></label>
+          {/*<label htmlFor='r5' className='bar'></label>*/}
         </div>
       </div>
     )

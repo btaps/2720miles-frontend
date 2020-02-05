@@ -40,41 +40,65 @@ class HomePage extends Component{
 	  //console.log(images)
     return(
       <div className='HomePage'>
-	  <h1 className='h1-App'> OUR CUSTOMERS SETTING TRENDS </h1> 
+	  <h1 className='h1-Homepage hide-h1-Homepage'> OUR CUSTOMERS SETTING TRENDS </h1> 
 	<HomeSlideshow />
+	<h1 className='h1-Homepage'> SHOP THE GRAM </h1>
+	<p className='p-Homepage'> Follow us on Instagram @2720miles </p>  
         <div className='wrapper'>
           <div className='Photos'>
-            <img className='home-img' src={PhotoA1} alt='product' />
+            <a href='/' target='_blank'>
+               <img className='home-img' src={PhotoA1} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoA2} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoA2} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoA3} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoA3} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoB1} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoB1} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoB3} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoB3} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoC1} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoC1} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoC2} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoC2} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoC3} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoC3} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoD1} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoD1} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoD2} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoD2} alt='product' />
+            </a>
 	  </div>
           <div className='Photos'>
-            <img className='home-img' src={PhotoD3} alt='product' />
+            <a href='/' target='_blank'>
+              <img className='home-img' src={PhotoD3} alt='product' />
+            </a>
 	  </div>
         </div>
       </div>	 

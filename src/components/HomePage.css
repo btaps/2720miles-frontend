@@ -12,23 +12,38 @@
   justify-content: space-around;
 }
 
-  .Photos{  
-    padding: 5px;
-    width: 400px;
-    height: 500px;
-    margin: 10px;
+.h1-Homepage{
+  text-align: center;
+}
 
-    line-height: 150px;
-  }
+.p-Homepage{
+  text-align: center;
+}
 
-  .home-img{
-    height: 100%;
-    width: 100%;
+.Photos{  
+  padding: 5px;
+  width: 400px;
+  height: 500px;
+  margin: 10px;
+  line-height: 150px;
+}
+
+.home-img{
+  height: 100%;
+  width: 100%;
+}
+
+@media all and (max-width:820px){
+  .hide-h1-Homepage{
+    display: none;
   }
-@media all and (max-width: 600px){
+}
+@media all and (max-width: 820px){
   .Photos{
-    height: 360px;
-    width: 287px;
+    height: 167px;
+    width: 48%;
+    padding: 3px;
+    margin: 0;
   }
 }
 
