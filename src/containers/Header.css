@@ -8,8 +8,12 @@
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
-  background-color: black;
-  color: white;
+  background-image:url("../Banner.jpg");
+}
+
+.Header-link a{
+  text-decoration: none;
+  color: black;
 }
 
 .Header-logo{

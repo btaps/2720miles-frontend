@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-a {
+ .NavBar a{
   text-decoration: none;
   margin: 0 4px;  
   color: white;
@@ -18,11 +18,11 @@ a {
     flex: 1 auto;
     order: -1;
   }
-  .NavBar > a {
+  .NavBar a {
     text-decoration: none;
     margin: 17px 8px;
     padding: 0 21px;  
-    color: white;
+    color: black;
     display: block;
   }
   .NavBar-main-div{

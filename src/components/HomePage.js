@@ -26,15 +26,15 @@ class HomePage extends Component{
   }
   
   componentDidMount(){
-    this.fetchAll()
+  //  this.fetchAll()
   }
   
-  fetchAll = () => {
-    ProductsModel.all()
-      .then(p => {
-        this.setState({products: p.rows})
-      })
-  }
+  //fetchAll = () => {
+  //  ProductsModel.all()
+    //  .then(p => {
+     //   this.setState({products: p.rows})
+     // })
+ //   }
   render(){
 	//  let images = this.state.products.length ? this.state.products[0].images : "Nothing here yet"
 	  //console.log(images)

@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import Logo from '../logo.png'
+//import Logo from '../logo.png'
 
 import NavBar from '../components/NavBar'
 import './Header.css'
@@ -10,8 +10,8 @@ class Header extends Component{
     return(
       <div className='Header'>
 	<div className='logo'>
-	  <div className='Header-div-img'>
-	    <img className='Header-logo'src={Logo} alt='2720miles logo'/>
+	  <div className='Header-link'>
+	    <a href='/' >&#9776;2720 MILES</a>
 	  </div>
 	</div>
 	<div className='search'>

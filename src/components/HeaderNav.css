@@ -3,7 +3,7 @@
   margin: 0; 
   margin-bottom: 20px;
 
-  background-color: rgb(253, 211, 214);
+  background-color: rgb(228, 217, 195);
   
   display: -webkit-box;
   display: -moz-box;
@@ -16,7 +16,7 @@
 }
 
 .navigation a {
-  background-color: rgb(253, 211, 214);
+  background-color: rgb(228, 217, 195);
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
@@ -33,7 +33,7 @@
 }
 
 .navigation a:hover {
-  background-color: rgba(253, 221, 114, .04);
+  background-color: rgba(228, 217, 195, .8);
 }
 
 .navigation li:hover .sub-menu {
@@ -54,7 +54,7 @@
 }
 
 .sub-menu a {
-  background-color: rgb(253, 221, 214);
+  background-color: rgb(226, 217, 195);
 }
 
 
