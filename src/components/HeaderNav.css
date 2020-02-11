@@ -25,21 +25,21 @@
   display: block;
   padding: 1em;
   margin: 0;
-  color: rgb(0,0,0);
+  color: black;
 }
 
 .navigation li ul{
   border-radius: 0px 0px 7px 7px;
 }
-
+/*
 .navigation a:hover {
   background-color: rgba(228, 217, 195, .8);
 }
-
 .navigation li:hover .sub-menu {
   display: block;
   max-height: 200px;
 }
+*/
 
 .sub-menu{
   list-style: none;
@@ -71,12 +71,12 @@
 }
 
 @media all and (max-width: 600px) {
-  .navigation {
+ /* .navigation {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0;
   }
-  
+  */
   .navigation a { 
     text-align: center; 
     padding: 10px;
@@ -106,5 +106,13 @@
   }
   .drop-width .New{
     padding-left: 40px;
+  }
+
+  .navigation a:hover {
+    background-color: rgba(228, 217, 195, .8);
+  }
+  .navigation li:hover .sub-menu {
+    display: block;
+    max-height: 200px;
   }
 }

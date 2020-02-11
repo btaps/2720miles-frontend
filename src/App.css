@@ -6,12 +6,21 @@
   border: solid black .2em;
 }
 
-.h1-App{
-  text-align: center;
+.App-side-menu{
+  height: 100%;
+  position: fixed;
+  width: 0;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  background-color: red;
+  overflow-x: hidden;
+  transition: .5s;
+  padding-top: 60px;
 }
 
-.Header {
-  color:red;
+.h1-App{
+  text-align: center;
 }
 
 .Footer {

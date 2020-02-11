@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import ProductsModel from '../models/ProductsModel'
+//import ProductsModel from '../models/ProductsModel'
 
 import HomeSlideshow from './HomeSlideshow'
 import './HomePage.css'

@@ -1,11 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './NavBar.css'
+import './HeaderLinks.css'
 
-function NavBar({currentUser, logout}){
+function HeaderLinks({currentUser, logout}){
  
   let links = (
-      <div className='NavBar'>
+      <div className='HeaderLinks'>
         <NavLink
           to = '/'exact
 	  activeClassName = 'active'
@@ -20,7 +20,7 @@ function NavBar({currentUser, logout}){
   )
 
   let authLinks = (
-      <div className='NavBar'>
+      <div className='HeaderLinks'>
         <NavLink
           to = '/'exact
 	  activeClassName = 'active'
@@ -41,10 +41,10 @@ function NavBar({currentUser, logout}){
   )
       
     return(  
-      <div className='NavBar-main-div'>
+      <div className='HeaderLinks-main-div'>
         { currentUser ? authLinks : links }
       </div>
     )
 }
 
-export default NavBar
+export default HeaderLinks

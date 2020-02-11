@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  { withRouter } from 'react-router-dom'
+
 import User from './models/UsersModel.js'
 import './App.css'
 
@@ -14,7 +15,9 @@ class App extends Component{
   state = {
     currentUser: localStorage.getItem('uid'),
     id: '',
-    allUsers: []
+    allUsers: [],
+    isShowing: false,
+    sideMenuWidth: "0",
   }
   
   componentDidMount(){
@@ -39,11 +42,19 @@ class App extends Component{
     this.props.history.push('/')
   };
   
+  openSideMenu = () =>{
+    console.log(this.state.sideMenuWidth)
+    this.setState({sideMenuWidth: "50%"})
+    console.log(this.state.sideMenuWidth)
+  }
 
   render(){
     return (
       <div >
-          <Header currentUser={this.state.currentUser} logout={this.logout} className="container"/>
+	  <div className='App-side-menu' onClick={this.openSideMenu} style={{width: this.state.sideMenuWidth}}>
+            hello
+          </div>
+          <Header openSideMenu ={this.openSideMenu} currentUser={this.state.currentUser} logout={this.logout} className="container"/>
 	  <HeaderNav />
 	  <Routes userId={this.state.id} currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser}/>
 	  <Footer className="container"/>

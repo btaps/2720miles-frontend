@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import NavBar from '../components/NavBar'
+import HeaderLinks from '../components/HeaderLinks'
 import './Footer.css'
 
 class Footer extends Component{
@@ -10,7 +10,7 @@ class Footer extends Component{
         <div className='icons'>
           Icons go here
         </div>
-          <NavBar />
+          <HeaderLinks />
       </div>
     )
   }
