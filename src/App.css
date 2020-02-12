@@ -12,10 +12,26 @@
   z-index: 1;
   top: 0%;
   left: 0%;
-  background-color: red;
+  background-color: rgb(228, 217, 195);
   overflow-x: hidden;
   transition: .5s;
   padding-top: 60px;
+}
+
+
+.close-side-menu-btn:hover{
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.close-side-menu-btn{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s
 }
 
 .h1-App{

@@ -1,4 +1,4 @@
-.HeaderLinks-main-div{
+/*.HeaderLinks-main-div{
   flex: .25;
 }
 
@@ -6,13 +6,23 @@
   flex-grow: .2;
   text-align: center;
 }
+*/
 
- .HeaderLinks a{
+
+
+.HeaderLinks a:hover{
+  color: rgb(255, 255, 255);
+}
+.HeaderLinks a{
+  display: block;
   text-decoration: none;
-  margin: 0 4px;  
-  color: black;
+  padding: 8px 8px 8px 32px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  transition: 0.3s;
 }
 
+/*
 @media all and (max-width: 600px){
   .HeaderLinks{
     flex: 1 auto;
@@ -30,3 +40,5 @@
     flex: 1;
   }
 }
+
+*/

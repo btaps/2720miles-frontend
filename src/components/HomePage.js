@@ -4,6 +4,8 @@ import React,{ Component } from 'react'
 import HomeSlideshow from './HomeSlideshow'
 import './HomePage.css'
 
+import Banner from '../Banner.jpg'
+
 import PhotoA1 from '../photos/picA1.png'
 import PhotoA2 from '../photos/picA2.png'
 import PhotoA3 from '../photos/picA3.png'
@@ -40,7 +42,10 @@ class HomePage extends Component{
 	  //console.log(images)
     return(
       <div className='HomePage'>
-	  <h1 className='h1-Homepage hide-h1-Homepage'> OUR CUSTOMERS SETTING TRENDS </h1> 
+	<div className='Banner-div'>
+	  <img src={Banner} alt='Banner made by Pia' />
+	</div>
+	<h1 className='h1-Homepage hide-h1-Homepage'> OUR CUSTOMERS SETTING TRENDS </h1> 
 	<HomeSlideshow />
 	<h1 className='h1-Homepage'> SHOP THE GRAM </h1>
 	<p className='p-Homepage'> Follow us on Instagram @2720miles </p>  

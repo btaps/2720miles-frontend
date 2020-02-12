@@ -18,8 +18,8 @@ class App extends Component{
     currentUser: localStorage.getItem('uid'),
     id: '',
     allUsers: [],
-    isShowing: true,
-    sideMenuOpen: "50%",
+    isShowing: false,
+    sideMenuOpen: "256px",
     sideMenuClose: "0"
   }
   
@@ -48,15 +48,11 @@ class App extends Component{
   };
   
   openSideMenu = () =>{
-    console.log(this.state.isShowing)   
     this.setState({isShowing: true})
-    console.log(this.state.isShowing)
   }
 
   closeSideMenu = () =>{
-    console.log(this.state.isShowing)   
     this.setState({isShowing: false})
-    console.log(this.state.isShowing)
   }
 
   render(){
@@ -66,7 +62,7 @@ class App extends Component{
 	    className='App-side-menu' 
 	    style={{width: this.state.isShowing ? this.state.sideMenuOpen : this.state.sideMenuClose}}
 	  >
-            <button className='close-side-menu-btn' onClick={this.closeSideMenu} >x</button>
+            <span className='close-side-menu-btn' onClick={this.closeSideMenu} >x</span>
             <HeaderLinks currentUser={this.state.currentUser} logout={this.logout} closeSideMenu={this.closeSideMenu}/>
 	  </div>
           <Header openSideMenu ={this.openSideMenu} currentUser={this.state.currentUser} logout={this.logout} className="container"/>
