@@ -9,7 +9,6 @@
 .App-side-menu{
   height: 100%;
   position: fixed;
-  width: 0;
   z-index: 1;
   top: 0%;
   left: 0%;

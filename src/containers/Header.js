@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 //import Logo from '../logo.png'
 
-import HeaderLinks from '../components/HeaderLinks.js'
+//import HeaderLinks from '../components/HeaderLinks.js'
 import './Header.css'
 
 class Header extends Component{

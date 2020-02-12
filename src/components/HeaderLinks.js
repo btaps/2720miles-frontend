@@ -2,18 +2,20 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './HeaderLinks.css'
 
-function HeaderLinks({currentUser, logout}){
+function HeaderLinks({currentUser, logout, closeSideMenu}){
  
   let links = (
       <div className='HeaderLinks'>
         <NavLink
           to = '/'exact
 	  activeClassName = 'active'
+          onClick={closeSideMenu}
 	>Home
 	</NavLink>
         <NavLink
           to = '/account/signin'exact
 	  activeClassName = 'active'
+          onClick={closeSideMenu}
 	>Sign In
 	</NavLink>
       </div>
@@ -22,6 +24,7 @@ function HeaderLinks({currentUser, logout}){
   let authLinks = (
       <div className='HeaderLinks'>
         <NavLink
+          onClick={closeSideMenu}
           to = '/'exact
 	  activeClassName = 'active'
 	>Home
@@ -29,6 +32,7 @@ function HeaderLinks({currentUser, logout}){
         <NavLink
           to = '/account/profile'exact
 	  activeClassName = 'active'
+          onClick={closeSideMenu}
 	>Profile
 	</NavLink>
         <NavLink
