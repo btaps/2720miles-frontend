@@ -33,10 +33,18 @@
 
 .Banner-div{
   width: 100%;
+  /*height: 400px;*/
   height: 100%;
+  background-image: url('../Banner.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 400px;
 }
 
 .Banner-div img{
+  display:none;
   height: auto;
   width: 100%;
 }
@@ -51,6 +59,19 @@
     width: 48%;
     padding: 3px;
     margin: 0;
+  }
+}
+
+@media all and (max-width: 600px){
+  .Banner-div img{
+    display: block;
+  }
+  .Banner-div{
+  background-image: none;
+  min-height: auto;
+  }
+  .Banner-div img{
+  display: block;
   }
 }
 

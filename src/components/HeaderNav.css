@@ -26,6 +26,7 @@
   padding: 1em;
   margin: 0;
   color: black;
+  transition: 0.3s;
 }
 
 .navigation li ul{
@@ -83,10 +84,8 @@
     border-top: 1px solid rgba(255,255,255,0.3); 
     border-bottom: 1px solid rgba(0,0,0,0.1); 
   }
-
-  
-  .navigation li:last-of-type a {
-    border-bottom: none;
+  .navigation a:hover{
+    border-bottom: 4px solid black;
   }
 }
 
