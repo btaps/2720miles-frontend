@@ -1,47 +1,50 @@
-const endPoint = 'http://localhost:8080/api/products'
-const updatePriceAndQuantity = 'http://localhost:8080/api/products/price&quantity'
+const endPoint = "http://localhost:8080/api/products";
+const updatePriceAndQuantity =
+  "http://localhost:8080/api/products/price&quantity";
 
 class ProductsModel {
   static all = () => {
     return fetch(endPoint)
-            .then(res => res.json())
-            .catch(err => console.log('Could not get all products using fetch', err))
-  }
+      .then(res => res.json())
+      .catch(err => console.log("Could not get all products using fetch", err));
+  };
 
-  static create = (product) => {
+  static create = product => {
     return fetch(endPoint, {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(product)
-            })
-             .then(res => res.json())
-             .catch(err => console.log('Could not insert Product', err))
-  }
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(product)
+    })
+      .then(res => {
+        res.json();
+        console.log(res);
+      })
+      .catch(err => console.log("Could not insert Product", err));
+  };
 
-  static delete = (id) => {
+  static delete = id => {
     return fetch(`${endPoint}/${id}`, {
-          method: "DELETE"
+      method: "DELETE"
     })
-              .then(res => res.json())
-              .catch(err => console.log('Could not delete Product', err))
-  }
+      .then(res => res.json())
+      .catch(err => console.log("Could not delete Product", err));
+  };
 
-  static update = (product) => {
+  static update = product => {
     return fetch(`${updatePriceAndQuantity}/${product.id}`, {
-          method: 'PUT',
-          headers:{
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(product)
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(product)
     })
-          .then(res => {
-                  console.log("MODEL")
-                  return res.json()
-          })
-          .catch(err => console.log('Could not update product', err))
-  }
-
+      .then(res => {
+        console.log("MODEL");
+        return res.json();
+      })
+      .catch(err => console.log("Could not update product", err));
+  };
 }
-export default ProductsModel
+export default ProductsModel;

@@ -8,6 +8,7 @@
  /* flex-wrap: wrap;
   align-items: center;
    height: 100%;*/
+  justify-content: space-between;
   padding: 11px 0;
   background-image:url("../Banner.jpg");
 }
@@ -26,7 +27,31 @@
 .Header-side-menu-icon{
   padding: 11px 11px 11px 0;
   font-size: 27px;
+  cursor: pointer;
 }
+
+.Header-shopping-cart-link{
+  text-decoration: none;
+  color: rgb(0,0,0);
+  height: 100%;
+  display: inline-block;
+  padding: 5px;
+}
+
+.Header-shopping-cart-div{
+  margin-right: 3%;
+  border: 2px solid;
+  border-radius: 9%;
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+.Header-shopping-cart-div:hover{
+  background-color: rgb(228, 217, 195);
+}
+
+
 /*
 .Header-logo{
   max-width: 100%;

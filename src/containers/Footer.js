@@ -1,19 +1,14 @@
-import React,{ Component } from 'react'
-import HeaderLinks from '../components/HeaderLinks'
-import './Footer.css'
+import React, { Component } from "react";
+import "./Footer.css";
 
-class Footer extends Component{
-
-  render(){
-    return(
-      <div className='background'>
-        <div className='icons'>
-          Icons go here
-        </div>
-          <HeaderLinks />
+class Footer extends Component {
+  render() {
+    return (
+      <div className="background">
+        <div className="icons">Icons go here</div>
       </div>
-    )
+    );
   }
 }
 
-export default Footer
+export default Footer;
