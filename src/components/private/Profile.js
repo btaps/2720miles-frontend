@@ -29,6 +29,9 @@ class Profile extends Component {
   };
 
   render() {
+    console.log(process.env.REACT_APP_CLIENT_ID);
+    console.log(process.env.REACT_APP_KEY);
+    console.log(process.env.REACT_APP_ADMIN);
     return (
       <div className="Deals">
         {this.state.firstName ? (
@@ -39,11 +42,7 @@ class Profile extends Component {
         ) : (
           <h3>Loading...</h3>
         )}
-        {this.props.userId === "044a61bd-add6-4f38-ae38-87618398c385" ? (
-          <AWS />
-        ) : (
-          ""
-        )}
+        {this.props.userId === process.env.REACT_APP_ADMIN ? <AWS /> : ""}
       </div>
     );
   }
