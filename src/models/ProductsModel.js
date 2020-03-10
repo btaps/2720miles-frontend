@@ -9,6 +9,14 @@ class ProductsModel {
       .catch(err => console.log("Could not get all products using fetch", err));
   };
 
+  static getOne = id => {
+    return fetch(`${endPoint}/${id}`)
+      .then(res => res.json())
+      .catch(err =>
+        console.log(`Couldn't retrive products with product_cat_id ${id}`)
+      );
+  };
+
   static create = product => {
     return fetch(endPoint, {
       method: "POST",

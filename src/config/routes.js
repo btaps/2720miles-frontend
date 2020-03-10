@@ -5,11 +5,18 @@ import HomePage from "../components/HomePage";
 import Signin from "../components/Signin";
 import Profile from "../components/private/Profile";
 import ShoppingCart from "../components/ShoppingCart";
+
 import Deals from "../components/Deals";
 import Default from "../components/Default";
 import Accessories from "../components/Accessories";
 import Clothing from "../components/Clothing";
 import New from "../components/New";
+
+import Tops from "../components/Tops";
+import Bottoms from "../components/Bottoms";
+import Handbags from "../components/Handbags";
+import Shoes from "../components/Shoes";
+import Jewelery from "../components/Jewelery";
 
 export default withRouter(
   ({ userId, setCurrentUser, currentUser, history }) => {
@@ -40,6 +47,11 @@ export default withRouter(
             />
           )}
         />
+        <Route path="/accessories/handbags" component={Handbags} />
+        <Route path="/accessories/shoes" component={Shoes} />
+        <Route path="/accessories/jewlery" component={Jewelery} />
+        <Route path="/clothing/tops" component={Tops} />
+        <Route path="/clothing/bottoms" component={Bottoms} />
         <Route path="/accessories" component={Accessories} />
         <Route path="/cart" component={ShoppingCart} />
         <Route path="/clothing" component={Clothing} />

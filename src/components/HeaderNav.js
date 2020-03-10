@@ -16,10 +16,10 @@ class HeaderNav extends Component {
             <Link to="/clothing">Clothing</Link>
             <ul className="sub-menu">
               <li>
-                <Link to="/">Tops</Link>
+                <Link to="/clothing/tops">Tops</Link>
               </li>
               <li>
-                <Link to="/">Bottoms</Link>
+                <Link to="/clothing/bottoms">Bottoms</Link>
               </li>
             </ul>
           </li>
@@ -27,13 +27,13 @@ class HeaderNav extends Component {
             <Link to="/accessories">Accessories</Link>
             <ul className="sub-menu">
               <li>
-                <Link to="/">Handbags</Link>
+                <Link to="/accessories/handbags">Handbags</Link>
               </li>
               <li>
-                <Link to="/">Shoes</Link>
+                <Link to="/accessories/shoes">Shoes</Link>
               </li>
               <li>
-                <Link to="/">Jewelery</Link>
+                <Link to="/accessories/jewlery">Jewelery</Link>
               </li>
             </ul>
           </li>
@@ -44,10 +44,10 @@ class HeaderNav extends Component {
                 <Link to="/">Tops</Link>
               </li>
               <li>
-                <Link Link="/">Bottoms</Link>
+                <Link to="/">Bottoms</Link>
               </li>
               <li>
-                <Link href="/">Accessories</Link>
+                <Link to="/">Accessories</Link>
               </li>
             </ul>
           </li>
