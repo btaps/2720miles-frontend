@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cafecito B2B Frontend Branch
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This application using React for frontend and fetch to connect to the backend.
 
-### `npm start`
+## Backend
+https://github.com/btaps/2720miles-backend
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# What's under the hood?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+-   ReactJS
+-   React Router
+-   dotenv
+-   Fetch
 
-### `npm test`
+# Getting Started
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local
 
-### `npm run build`
+1. Run `npm i`
+2. Start dev server `npm start`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prod
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm run build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Folder Structure
 
-### `npm run eject`
+<pre>
++-- src
+|-- +-- components
+|-- +-- containers
+|-- +-- models
+|-- +-- photos
+|-- +-- config
+|-- +-- App.css
+|-- +-- App.js
+|-- +-- index.css
+|-- +-- index.js
+</pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When cloning this project, if any of the above folders are missing, feel free to re-create as needed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Components filenames should PascalCased.
 
-## Learn More
+## Containers
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Containers are the main Compoment handling other children components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Models
 
-### Code Splitting
+Models act as the folder containing fetch requests made for the backend api's.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### This is still a work in progress 
