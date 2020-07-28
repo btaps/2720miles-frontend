@@ -4,6 +4,9 @@
 
 This application using React for frontend and fetch to connect to the backend.
 
+## Visit the website here
+http://2720miles.co/
+
 ## Backend
 https://github.com/btaps/2720miles-backend
 
